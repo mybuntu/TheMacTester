@@ -1,5 +1,5 @@
 # The Mac Tester (using Tk gui) 
-## by Jules Ouanounou
+## by Jules David
 import tkinter as tk
 from tkinter import messagebox
 from modules import info, specs, battery_test, hardware_test, user_test, report
