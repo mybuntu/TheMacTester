@@ -18,7 +18,9 @@ Structure:
 ---------
 ```plaintext
 test_mac/
-├── gui.py                 # Script de tests Graphique
+├── requirements.txt        # Dependances (libraies pythons)
+├── st.sh                   # script de démarrage (installation des dependances)
+├── gui.py                  # Script de tests Graphique
 ├── main.py                 # Script de tests CLI
 ├── modules/                # Dossier pour les modules
 │   ├── info.py             # Module pour la prise d'informations système
