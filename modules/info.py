@@ -1,5 +1,5 @@
 # The GUIless Mac Tester   
-## by Jules Ouanounou 
+## by Jules David 
 import subprocess
 import re
 import os
