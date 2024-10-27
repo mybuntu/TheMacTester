@@ -1,5 +1,5 @@
 # The GUIless Mac Tester   
-## by Jules Ouanounou
+## by Jules David
 import subprocess
 import re
 from pathlib import Path
