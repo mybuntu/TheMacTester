@@ -1,5 +1,5 @@
 # The GUIless Mac Tester   
-## by Jules Ouanounou
+## by Jules David
 from fpdf import FPDF
 from datetime import datetime
 
