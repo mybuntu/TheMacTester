@@ -18,7 +18,8 @@ Structure:
 ---------
 ```plaintext
 test_mac/
-├── main.py                 # Script principal
+├── gui.py                 # Script de tests Graphique
+├── main.py                 # Script de tests CLI
 ├── modules/                # Dossier pour les modules
 │   ├── info.py             # Module pour la prise d'informations système
 │   ├── specs.py            # Module pour les tests matériels
