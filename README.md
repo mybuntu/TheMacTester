@@ -22,13 +22,14 @@ test_mac/
 ├── modules/                # Dossier pour les modules
 │   ├── info.py             # Module pour la prise d'informations système
 │   ├── specs.py            # Module pour les tests matériels
-│   ├── battery_test.py     # Module pour les tests matériels
-│   └── hardware_test.py    # Module pour générer le rapport PDF
+│   ├── battery_test.py     # Module pour les tests concernant la batterie
+│   └── hardware_test.py    # Module pour les tests matériels
+│   └── user_test.py        # Module pour générer les tests utilisateurs
 │   └── report.py           # Module pour générer le rapport PDF
 ├── resources/              # Dossier pour les fichiers de ressources (si besoin)
 │   └── model_years.txt     # Fichier contenant les modèles et les années
 └── output/                 # Dossier pour les fichiers de sortie
-    └── resultats.txt       # Fichier texte des résultats
+    └── resultats.txt       # Fichier texte des résultats, se créer après exécution
 
 
 Explication : 
