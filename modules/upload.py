@@ -1,2 +1,2 @@
 # The GUIless Mac Tester   
-## by Jules Ouanounou
+## by Jules David
