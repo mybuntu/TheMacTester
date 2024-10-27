@@ -1,4 +1,4 @@
-# The GUIless Mac Tester   
+# The GUI Mac Tester   
 ## by Jules Ouanounou
 
 # Pour un environnement virtuel
