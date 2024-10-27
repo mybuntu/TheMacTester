@@ -46,7 +46,7 @@ def user_test():
         "5": "Usé"
     }
 
-    etat_global = input("ÉTAT GLOBAL DE L'ORDINATEUR:\nA/ Neuf\nB/ Très bon état\nC/ Bon état\nD/ Correct\nE/ Usé\nSélectionnez une option (A(1), B(2), C(3), D(4), E(4): ").strip().lower()
+    etat_global = input("ÉTAT GLOBAL DE L'ORDINATEUR:\nA(1)/ Neuf\nB(2)/ Très bon état\nC(3)/ Bon état\nD(4)/ Correct\nE(5)/ Usé\nSélectionnez une option 1, 2, 3, 4, 5: ").strip().lower()
 
     etat_result = etat_options.get(etat_global, "Non spécifié")
 
