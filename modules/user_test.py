@@ -37,5 +37,22 @@ def user_test():
             file.write(f"{question.split(' au niveau du ')[-1]}: {status}\n")
         file.write("\n")
         
-    
-    print("Tests utilisateurs terminés et enregistrés dans resultats.txt")
+    # Demander l'état global de l'ordinateur
+    etat_options = {
+        "1": "Neuf",
+        "2": "Très bon état",
+        "3": "Bon état",
+        "4": "Correct",
+        "5": "Usé"
+    }
+
+    etat_global = input("ÉTAT GLOBAL DE L'ORDINATEUR:\nA/ Neuf\nB/ Très bon état\nC/ Bon état\nD/ Correct\nE/ Usé\nSélectionnez une option (A(1), B(2), C(3), D(4), E(4): ").strip().lower()
+
+    etat_result = etat_options.get(etat_global, "Non spécifié")
+
+    # Ajouter l'état global à la fin du fichier resultats.txt
+    with open("output/resultats.txt", "a") as file:
+        file.write("=== ÉTAT GLOBAL DE L'ORDINATEUR ===\n")
+        file.write(f"État: {etat_result}\n\n")
+
+    print("État global de l'ordinateur ajouté dans resultats.txt")
