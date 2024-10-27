@@ -1,5 +1,5 @@
 # The GUIless Mac Tester   
-## by Jules Ouanounou
+## by Jules David
 ## ATTENTION TEST ECRAN NE MARCHE POUR L'INSTANT QU'EN GRAPHIQUE...
 import os
 import sys
