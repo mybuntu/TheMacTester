@@ -1,5 +1,5 @@
 # The GUI Mac Tester   
-## by Jules Ouanounou
+## by Jules David
 
 # Pour un environnement virtuel
 cd ~/TheMacTester/ \
