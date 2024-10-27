@@ -1,0 +1,21 @@
+=== RÉSULTATS DES TESTS UTILISATEUR ===
+Connecteur de charge ?: Fonctionnel
+Ports (USB, Thunderbolt, SD-Card slot, HDMI port) ?: Fonctionnel
+Slot RAM ?: Fonctionnel
+Ventilateurs ?: Fonctionnel
+Wifi/Airport ?: Fonctionnel
+Bluetooth ?: Fonctionnel
+clavier ?: Fonctionnel
+Bouton Power ?: Fonctionnel
+Empreinte Touch ID ?: Fonctionnel
+Indicateur de charge ?: Fonctionnel
+Trackpad ?: Fonctionnel
+Charnière ?: Fonctionnel
+Témoin de mise en veille ?: Fonctionnel
+Touchbar ?: Fonctionnel
+Rétroéclairage Clavier ?: Fonctionnel
+Capteur de luminiosité ?: Fonctionnel
+
+=== ÉTAT GLOBAL DE L'ORDINATEUR ===
+État: Correct
+
