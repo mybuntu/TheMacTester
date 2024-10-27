@@ -1,4 +1,4 @@
-# The GUIless Mac Tester   
+# The GUIless Mac Tester (Using Tk gui)   
 ## by Jules Ouanounou
 import tkinter as tk
 from tkinter import messagebox
