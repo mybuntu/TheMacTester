@@ -34,8 +34,9 @@ Pour un environnement virtuel (facultatif)\
     pip3 install -r requirements.txt 
     python3 gui.py (pour interface graphique Tk)
     python3 main.py (Pour interface CLI )
+```
 
-Explication : 
+# Explication : 
 main propose un range de choix de tests qui sont des scripts (modules) qui sont rangé dans le dossier (vous le voyez venir ?) modules/ 
 Chaque scripts est une fonction mais le but est de rendre le programme de base plus modulable. 
 Dans le dossier resoures, vous trouverez un repertoire des mac par modèles et années (incomplète pour l'instant). 
