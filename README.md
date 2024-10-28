@@ -34,6 +34,10 @@ Pour un environnement virtuel (facultatif)
     pip3 install -r requirements.txt 
     python3 gui.py (pour interface graphique Tk)
     python3 main.py (Pour interface CLI )
+->Pour désactiver l'environnement virtuel:
+    deactivate
+    rm -rf venv
+    
 
 ```
 
