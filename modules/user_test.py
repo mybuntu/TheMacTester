@@ -1,6 +1,6 @@
 # The GUIless Mac Tester   
 ## by Jules David
-import tk
+import tkinter as tk
 def user_test():
     issues_detected = {}
 
