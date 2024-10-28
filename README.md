@@ -21,15 +21,15 @@ test_mac/
 └── output/                 # Dossier pour les fichiers de sortie
     └── resultats.txt       # Fichier texte des résultats, se créer après exécution
 
-Utilisation (Install automatisée) :
-    cd TheMacTester
-    ./install.sh
+Utilisation :
+Dans le repertoire TheMacTester
 Utilisation (Install manuelle) :
 Pour un environnement virtuel
-Après avoir cloner le repo
-    cd ~/TheMacTester/ 
+
     python3 -m venv venv 
     source venv/bin/activate 
+    (optionnel)
+    pip3 install --upgrade pip
     pip3 install -r requirements.txt 
     python3 main.py 
 
