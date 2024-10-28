@@ -24,7 +24,7 @@ def user_test():
     ]
 
     for question in questions:
-        answer = input(f"{question} ([O]k(Fonctionnel)/[D]effectueux): (Enter => O)").strip().lower()
+        answer = input(f"([O]k(Fonctionnel)/[D]effectueux): (Enter => O)\n{question}").strip().lower()
         if answer in ["d", "D"]:
             issues_detected[question] = "Défectueux"
         else:
