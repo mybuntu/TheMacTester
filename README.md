@@ -25,7 +25,7 @@ test_mac/
 # Utilisation :
 Dans le repertoire TheMacTester \
 Utilisation (Install manuelle) :\
-Pour un environnement virtuel (facultatif)\
+Pour un environnement virtuel (facultatif)
 ```plaintext
     python3 -m venv venv 
     source venv/bin/activate 
@@ -34,6 +34,7 @@ Pour un environnement virtuel (facultatif)\
     pip3 install -r requirements.txt 
     python3 gui.py (pour interface graphique Tk)
     python3 main.py (Pour interface CLI )
+
 ```
 
 # Explication : 
