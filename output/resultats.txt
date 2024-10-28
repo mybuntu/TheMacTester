@@ -1,0 +1,36 @@
+=== INFO SYSTÈME ===
+Identifiant du modèle: MacBookPro12,1
+Année: 2015
+Numéro de série: C02QD5LNFVH3
+
+=== SPÉCIFICATIONS DU SYSTÈME ===
+Processeur: Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+RAM: 8.00 GB
+GPU Intégré: Intel Iris Graphics 6100
+Aucun GPU dédié trouvé.
+Disque: APPLE SSD SM0512G
+Type: SSD
+Capacité: 500,07 GB (500 068 036 608 bytes)
+Santé: Verified
+
+=== RÉSULTATS DES TESTS UTILISATEUR ===
+Connecteur de charge ?: Fonctionnel
+Ports (USB, Thunderbolt, SD-Card slot, HDMI port) ?: Fonctionnel
+Slot RAM ?: Fonctionnel
+Ventilateurs ?: Fonctionnel
+Wifi/Airport ?: Fonctionnel
+Bluetooth ?: Fonctionnel
+clavier ?: Fonctionnel
+Bouton Power ?: Fonctionnel
+Empreinte Touch ID ?: Fonctionnel
+Indicateur de charge ?: Fonctionnel
+Trackpad ?: Fonctionnel
+Charnière ?: Fonctionnel
+Témoin de mise en veille ?: Fonctionnel
+Touchbar ?: Fonctionnel
+Rétroéclairage Clavier ?: Fonctionnel
+Capteur de luminiosité ?: Fonctionnel
+
+=== ÉTAT GLOBAL DE L'ORDINATEUR ===
+État: Non spécifié
+
