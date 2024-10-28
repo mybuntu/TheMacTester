@@ -53,6 +53,10 @@ Ignorer les modules "impression" & "upload" qui pour l'instant n'ont pas été t
 Les tests nécessitant des entrées de l'utilisateur se feront depuis le terminal.
 
 # Les résultats :
-Vous retrouverez les resultats des tests dans les repertoire de travil.
+Vous retrouverez les resultats des tests dans les repertoire de travail. Le resultat du test du microphone s'appelle très intuitivement "test_microphone.wav" et sera dans le repertoire  du repo tout comme le rapport des tests en pdf => "rapport_de_test.pdf"... Dans le dossier "output" vous trouverez le resultats au format txt.
+
+
+
+
 
 
