@@ -24,11 +24,11 @@ def user_test():
     ]
 
     for question in questions:
-        answer = input(f"{question} (o/N): (Enter => N)").strip().lower()
-        if answer in ["n", "N", ""]:
-            issues_detected[question] = "Fonctionnel"
-        else:
+        answer = input(f"{question} ([O]k(Fonctionnel)/[D]effectueux): (Enter => O)").strip().lower()
+        if answer in ["d", "D", ""]:
             issues_detected[question] = "Défectueux"
+        else:
+            issues_detected[question] = "Fonctionnel"
 
     # Stocker les résultats dans resultats.txt
     with open("output/resultats.txt", "a") as file:
