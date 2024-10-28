@@ -40,7 +40,7 @@ def generate_pdf(output_file, terminal_output, hardware_results):
                     pdf.multi_cell(0, 10, line)
 
         # Enregistrer le PDF
-        pdf.output("test_mac_resultats.pdf")
+        pdf.output("rapport_de_test.pdf")
         print("Le PDF a été généré avec succès !")
 
     except Exception as e:
