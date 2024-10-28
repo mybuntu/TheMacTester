@@ -4,4 +4,7 @@ python3 -m venv venv
 
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
-source venv/bin/activate
+
+echo "Install terminée. \ 
+Maintenant veuillez copier coller la commande suivante : \
+                                    source venv/bin/activate"
