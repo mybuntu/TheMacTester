@@ -21,7 +21,7 @@ test_mac/
 └── output/                 # Dossier pour les fichiers de sortie
     └── resultats.txt       # Fichier texte des résultats, se créer après exécution
 
-Utilisation :
+# Utilisation :
 Dans le repertoire TheMacTester
 Utilisation (Install manuelle) :
 Pour un environnement virtuel (facultatif)
