@@ -49,4 +49,10 @@ Chaque modules renvoie un resultat dans le fichier output/resultats.txt.
 Le module report.py permet de generer un pdf qui se basera sur le fichier resultats.txt pour rendre un fichier pdf plus lisible. 
 Ignorer les modules "impression" & "upload" qui pour l'instant n'ont pas été testé.
 
+# Pour la version gui.py
+Les tests nécessitant des entrées de l'utilisateur se feront depuis
+
+# Les résultats :
+Vous retrouverez les resultats des tests dans les repertoire de travil.
+
 
