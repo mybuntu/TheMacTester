@@ -21,11 +21,12 @@ test_mac/
 └── output/                 # Dossier pour les fichiers de sortie
     └── resultats.txt       # Fichier texte des résultats, se créer après exécution
 ```
-Utilisation :
-Dans le repertoire TheMacTester
-Utilisation (Install manuelle) :
-Pour un environnement virtuel (facultatif)
-    
+
+# Utilisation :
+Dans le repertoire TheMacTester \
+Utilisation (Install manuelle) :\
+Pour un environnement virtuel (facultatif)\
+```plaintext
     python3 -m venv venv 
     source venv/bin/activate 
     (Dependances)
