@@ -1,19 +1,6 @@
 # The GUI Mac Tester   
 ## by Jules David
 
-# Pour un environnement virtuel
-cd ~/TheMacTester/ \
-python3 -m venv venv \
-source venv/bin/activate \
-pip3 install -r requirements.txt \
-python3 main.py 
-
-
-# Dans un env de test
-cd ~/TheMacTester/ \
-pip3 install -r requirements.txt \
-python3 main.py
-
 Structure:
 ---------
 ```plaintext
@@ -34,6 +21,23 @@ test_mac/
 └── output/                 # Dossier pour les fichiers de sortie
     └── resultats.txt       # Fichier texte des résultats, se créer après exécution
 
+Utilisation (Install automatisée) :
+    cd TheMacTester
+    ./install.sh
+Utilisation (Install manuelle) :
+Pour un environnement virtuel
+Après avoir cloner le repo
+    cd ~/TheMacTester/ 
+    python3 -m venv venv 
+    source venv/bin/activate 
+    pip3 install -r requirements.txt 
+    python3 main.py 
+
+
+# Dans un env de test manuelle(Install manuelle) :
+    cd ~/TheMacTester/ \
+    pip3 install -r requirements.txt \
+    python3 main.py
 
 Explication : 
 main propose un range de choix de tests qui sont des scripts (modules) qui sont rangé dans le dossier (vous le voyez venir ?) modules/ 
