@@ -24,20 +24,15 @@ test_mac/
 Utilisation :
 Dans le repertoire TheMacTester
 Utilisation (Install manuelle) :
-Pour un environnement virtuel
-
+Pour un environnement virtuel (facultatif)
+    
     python3 -m venv venv 
     source venv/bin/activate 
-    (optionnel)
+    (Dependances)
     pip3 install --upgrade pip
     pip3 install -r requirements.txt 
-    python3 main.py 
-
-
-# Dans un env de test manuelle(Install manuelle) :
-    cd ~/TheMacTester/ \
-    pip3 install -r requirements.txt \
-    python3 main.py
+    python3 gui.py (pour interface graphique Tk)
+    python3 main.py (Pour interface CLI )
 
 Explication : 
 main propose un range de choix de tests qui sont des scripts (modules) qui sont rangé dans le dossier (vous le voyez venir ?) modules/ 
