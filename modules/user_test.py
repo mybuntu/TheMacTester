@@ -3,8 +3,6 @@
 import tkinter as tk
 import os
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
 def user_test():
     issues_detected = {}
 
@@ -27,13 +25,16 @@ def user_test():
         "Capteur de luminiosité ?"
     ]
 
+    os.system('cls' if os.name == 'nt' else 'clear')
+
     for question in questions:
-        os.system('cls' if os.name == 'nt' else 'clear')    
         answer = input(f"([O]k(Fonctionnel)/[D]effectueux): (Enter => O)\n{question}").strip().lower()
         if answer in ["d", "D"]:
             issues_detected[question] = "Défectueux"
         else:
             issues_detected[question] = "Fonctionnel"
+
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     # Stocker les résultats dans resultats.txt
     with open("output/resultats.txt", "a") as file:
