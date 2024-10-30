@@ -7,8 +7,7 @@ import tkinter as tk
 from tkinter import messagebox
 from modules import info, specs, battery_test, hardware_test, user_test, report
 
-
-# Ajouter le dossier 'modules' au chemin d'importation
+# Ajouter les modules au chemin d'importation
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'modules'))
 
 from modules import info, specs, hardware_test, report, battery_test, user_test
