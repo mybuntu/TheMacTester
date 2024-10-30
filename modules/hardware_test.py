@@ -11,6 +11,7 @@ RECORD_SECONDS = 2
 SAMPLE_RATE = 44100
 test_results = {}
 
+# Fonction de réponses au rapport de tests
 def ask_confirmation(component):
     response = input(f"Est-ce que {component} fonctionne ? O/n : ").strip()
     if response == '' or response == 'o':
@@ -21,6 +22,7 @@ def ask_confirmation(component):
         print("Réponse invalide, par défaut 'Oui' enregistré.")
         return "Fonctionnel"
 
+# Fonction de test de la camera
 def test_camera():
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
@@ -44,6 +46,7 @@ def test_camera():
         cv2.waitKey(1)
     test_results["Caméra"] = ask_confirmation("la caméra")
 
+# Test du microphone
 def test_microphone():
     print("Test du microphone...")
     print("Enregistrement de l'audio...")
@@ -53,6 +56,7 @@ def test_microphone():
     print("Enregistrement terminé. Vous pouvez écouter le fichier 'test_microphone.wav'.")
     test_results["Microphone"] = ask_confirmation("le microphone")
 
+# Test des hauts-parleurs
 def test_speakers():
     print("Test des haut-parleurs...")
 
@@ -83,6 +87,7 @@ def test_speakers():
     print("Les deux haut-parleurs ont été testés.")
     test_results["Haut-parleurs (stéréo)"] = ask_confirmation("les deux haut-parleurs ensemble")
 
+# Test de l'écran (dead-pixel)
 def test_screen():
     print("Test de l'écran pour les pixels morts. Appuyez sur 'q' pour passer au suivant.")
     colors = [(0, 0, 255), (0, 255, 0), (255, 0, 0), (0, 255, 255)]  # Bleu, Vert, Rouge, Jaune
@@ -112,12 +117,13 @@ def test_screen():
         cv2.waitKey(1)
     test_results["Écran"] = ask_confirmation("l'écran")
 
+# Ordre des test
 def run_tests():
     print("--- Début des tests matériels ---")
+    test_screen()
     test_speakers()
     test_microphone()
     test_camera()
-    test_screen()
     print("--- Fin des tests matériels ---")
 
     # Enregistrer les résultats dans resultats.txt
