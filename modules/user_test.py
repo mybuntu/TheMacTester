@@ -28,6 +28,7 @@ def user_test():
     ]
 
     for question in questions:
+        os.system('cls' if os.name == 'nt' else 'clear')    
         answer = input(f"([O]k(Fonctionnel)/[D]effectueux): (Enter => O)\n{question}").strip().lower()
         if answer in ["d", "D"]:
             issues_detected[question] = "Défectueux"
