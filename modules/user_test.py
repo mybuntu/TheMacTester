@@ -1,6 +1,9 @@
 # The GUIless Mac Tester   
 ## by Jules David
 import tkinter as tk
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+
 def user_test():
     issues_detected = {}
 
