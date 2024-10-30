@@ -4,7 +4,7 @@ import subprocess
 import re
 import os
 
-# Chemin du fichier de sortie
+# Chemin du fichier resultats.txt
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
 # Créer le dossier output s'il n'existe pas
