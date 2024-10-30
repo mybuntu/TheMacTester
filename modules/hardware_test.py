@@ -11,10 +11,9 @@ RECORD_SECONDS = 2
 SAMPLE_RATE = 44100
 test_results = {}
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
 # Fonction de réponses au rapport de tests
 def ask_confirmation(component):
+    os.system('cls' if os.name == 'nt' else 'clear')
     response = input(f"Est-ce que {component} fonctionne ? O/n : ").strip()
     if response == '' or response == 'o':
         return "Fonctionnel"
