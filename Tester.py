@@ -3,6 +3,9 @@
 import tkinter as tk
 from tkinter import messagebox
 from modules import info, specs, battery_test, hardware_test, user_test, report
+import os
+
+os.system('cls' if os.name == 'nt' else 'clear')
 
 def run_info_test():
     info.collect_info()
@@ -30,10 +33,10 @@ def generate_report():
 
 # Initialisation de la fenêtre principale
 root = tk.Tk()
-root.title("Test des Mac")
+root.title("TheMacTester")
 root.geometry("400x400")
 
-# Boutons pour chaque test
+# CTA pour chaque test
 tk.Button(root, text="Prendre les informations système", command=run_info_test).pack(pady=5)
 tk.Button(root, text="Collecter les spécifications système", command=run_specs_test).pack(pady=5)
 tk.Button(root, text="Consulter l'état de la batterie", command=run_battery_test).pack(pady=5)
