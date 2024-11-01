@@ -4,14 +4,8 @@ import subprocess
 import re
 import os
 
-# Chemin du fichier resultats.txt
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
-# Créer le dossier output s'il n'existe pas
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
 # Fonction pour obtenir les informations sur la batterie et les écrire dans un fichier texte
-def check_battery_status(OUTPUT_FILE):
+def check_battery_status(output_file):
     try:
         # Exécuter la commande ioreg pour obtenir les capacités
         ioreg_output = subprocess.check_output("ioreg -l -b | grep -i -E 'capacity|CycleCount'", shell=True).decode('utf-8')
@@ -38,13 +32,11 @@ def check_battery_status(OUTPUT_FILE):
         )
 
         # Écrire les résultats dans le fichier texte
-        with open(OUTPUT_FILE, 'a', encoding='utf-8') as file:
+        with open(output_file, 'a', encoding='utf-8') as file:
             file.write("=== ETAT DE LA BATTERIE ===\n")
             file.write(result)
             file.write("\n")
-
-
-        print(f"Les informations sur la batterie ont été exportées dans {OUTPUT_FILE} avec succès.")
+        print(f"Les informations sur la batterie ont été exportées dans {output_file} avec succès.")
 
     except Exception as e:
         print(f"Erreur lors de la récupération des informations de la batterie : {e}")
