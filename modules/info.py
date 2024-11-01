@@ -4,14 +4,6 @@ import subprocess
 import re
 import os
 
-# # Chemin vers le fichier de sortie
-# OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
-# OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
-
-# # Créer le dossier output s'il n'existe pas
-# os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-
 def load_model_years(file_path):
     """Charge la correspondance entre les identifiants de modèle et les années."""
     model_year_map = {}
@@ -48,7 +40,6 @@ def collect_info(output_file):
                 f"Année: {year}\n"
                 f"Numéro de série: {serial_number_value}\n"
             )
-
             # Écriture dans le fichier texte
             with open(output_file, 'a', encoding='utf-8') as file:
                 file.write("=== INFO SYSTÈME ===\n")
