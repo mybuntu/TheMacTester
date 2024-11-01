@@ -106,9 +106,9 @@ def test_screen():
 
 def run_tests(output_file, output_dir):
     test_screen()
-    # test_speakers()
-    # test_microphone(output_dir)
-    # test_camera()
+    test_speakers()
+    test_microphone(output_dir)
+    test_camera()
 
     # Enregistrer les résultats dans le fichier spécifié
     with open(output_file, 'a', encoding='utf-8') as file:
