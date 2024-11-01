@@ -41,7 +41,7 @@ def collect_info(output_file):
                 f"Numéro de série: {serial_number_value}\n"
             )
             # Écriture dans le fichier texte
-            with open(output_file, 'a', encoding='utf-8') as file:
+            with open(output_file, 'w', encoding='utf-8') as file:
                 file.write("=== INFO SYSTÈME ===\n")
                 file.write(result_text)
                 file.write("\n")
