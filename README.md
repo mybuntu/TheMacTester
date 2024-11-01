@@ -21,7 +21,7 @@ test_mac/
 
 # Utilisation :
 Dans le repertoire TheMacTester \
-Utilisation (Install manuelle) :\
+Utilisation (Installation manuelle) :\
 Pour un environnement virtuel (facultatif)
 ```plaintext
     python3 -m venv venv 
