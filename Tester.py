@@ -6,7 +6,7 @@ from modules.user_test import user_test
 
 # Configuration du répertoire de sortie
 def set_output_directory():
-    user_input = input("Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise (ou « A Mettre en vente »): ")
+    user_input = input("Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise \n POUR UN RECONDITIONNEMENT\n Veuillez taper 'Recond': ")
     main_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'RESULTATS_TESTS')  # Dossier principal sur le bureau
     output_dir = os.path.join(main_dir, user_input)  # Sous-dossier pour cet utilisateur
     os.makedirs(output_dir, exist_ok=True)
