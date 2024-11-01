@@ -6,9 +6,8 @@ Structure:
 ```plaintext
 test_mac/
 ├── requirements.txt        # Dependances (libraies pythons)
-├── st.sh                   # script de démarrage (installation des dependances)
-├── gui.py                  # Script de tests Graphique
-├── main.py                 # Script de tests CLI
+|
+├── Tester.py               # Script de tests Graphique
 ├── modules/                # Dossier pour les modules
 │   ├── info.py             # Module pour la prise d'informations système
 │   ├── specs.py            # Module pour les tests matériels
