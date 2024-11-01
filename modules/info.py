@@ -4,12 +4,12 @@ import subprocess
 import re
 import os
 
-# Chemin vers le fichier de sortie
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
+# # Chemin vers le fichier de sortie
+# OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'output')
+# OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
 
-# Créer le dossier output s'il n'existe pas
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+# # Créer le dossier output s'il n'existe pas
+# os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 def load_model_years(file_path):
@@ -24,19 +24,19 @@ def load_model_years(file_path):
         print(f"Erreur lors du chargement des modèles : {e}")
     return model_year_map
 
-
-def collect_info():
+def collect_info(output_file):
     """Récupère les informations système et les écrit dans un fichier texte."""
     try:
         # Obtenir les informations système avec system_profiler
         system_info = subprocess.check_output("system_profiler SPHardwareDataType", shell=True).decode('utf-8')
 
-        # Récupérer l'identifiant du modèle (ex: MacBookPro16,1)
+        # Récupérer l'identifiant du modèle et le numéro de série
         model_identifier = re.search(r"Model Identifier:\s*(.+)", system_info)
         serial_number = re.search(r"Serial Number \(system\):\s*(.+)", system_info)
 
         if model_identifier and serial_number:
             model_id = model_identifier.group(1).strip()
+            serial_number_value = serial_number.group(1).strip()
 
             # Charger la correspondance modèle <-> année
             model_year_map = load_model_years(os.path.join(os.path.dirname(__file__), '..', 'resources', 'model_years.txt'))
@@ -46,20 +46,21 @@ def collect_info():
             result_text = (
                 f"Identifiant du modèle: {model_id}\n"
                 f"Année: {year}\n"
-                f"Numéro de série: {serial_number.group(1).strip()}\n"
+                f"Numéro de série: {serial_number_value}\n"
             )
 
             # Écriture dans le fichier texte
-            with open(OUTPUT_FILE, 'a', encoding='utf-8') as file:
+            with open(output_file, 'a', encoding='utf-8') as file:
                 file.write("=== INFO SYSTÈME ===\n")
                 file.write(result_text)
                 file.write("\n")
 
-
-            print(f"Les informations de la machine ont été exportées dans {OUTPUT_FILE} avec succès.")
+            print(f"Les informations de la machine ont été exportées dans {output_file} avec succès.")
+            return serial_number_value  # Retourne le numéro de série
         else:
             print("Identifiant du modèle ou numéro de série non trouvé.")
+            return None  # Retourne None si non trouvé
 
     except subprocess.CalledProcessError as e:
         print(f"Erreur lors de l'exécution de la commande system_profiler : {e}")
-
+        return None  # Retourne None en cas d'erreur
