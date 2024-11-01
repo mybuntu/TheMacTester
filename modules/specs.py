@@ -4,14 +4,7 @@ import subprocess
 import re
 from pathlib import Path
 
-# Définir les chemins d'exportation
-BASE_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = BASE_DIR / 'output'
-OUTPUT_FILE = OUTPUT_DIR / 'resultats.txt'
-
-# Créer le dossier output s'il n'existe pas
-OUTPUT_DIR.mkdir(exist_ok=True)
-
+# Récuperation des specs (CPU, GPU, RAM & DISKS)
 def get_processor_info():
     """Récupère les informations du processeur."""
     try:
@@ -72,9 +65,9 @@ def get_disk_info():
     except subprocess.CalledProcessError:
         return "Impossible de récupérer les informations du disque.\n"
 
-def export_system_specs():
-    """Rassemble toutes les spécifications système et les écrit dans le fichier resultats.txt."""
-    with open(OUTPUT_FILE, 'a', encoding='utf-8') as file:
+def export_system_specs(output_file):
+    # Rassemble toutes les spécifications système et les écrit dans le fichier resultats.txt.
+    with open(output_file, 'a', encoding='utf-8') as file:
         file.write("=== SPÉCIFICATIONS DU SYSTÈME ===\n")
         file.write(get_processor_info())
         file.write(get_ram_info())
