@@ -29,31 +29,23 @@ Pour un environnement virtuel (facultatif)
     (Dependances)
     pip3 install --upgrade pip
     pip3 install -r requirements.txt 
-    python3 gui.py (pour interface graphique Tk)
-    python3 main.py (Pour interface CLI )
+    python3 Tester.py
 ->Pour désactiver l'environnement virtuel:
     deactivate
     rm -rf venv
-    
-
 ```
 
 # Explication : 
-main propose un range de choix de tests qui sont des scripts (modules) qui sont rangé dans le dossier (vous le voyez venir ?) modules/ 
-Chaque scripts est une fonction mais le but est de rendre le programme de base plus modulable. 
+Le script Tester.py propose plusieurs choix de tests.
+Chaque module est une fonction mais le but était de rendre le programme de base plus modulable. 
 Dans le dossier resoures, vous trouverez un repertoire des mac par modèles et années (incomplète pour l'instant). 
-Chaque modules renvoie un resultat dans le fichier output/resultats.txt. 
+Chaque modules renvoie un resultat dans le fichier ~/Desktop/$NOM_DU_DOSSIER_/resultats.txt. \
 Le module report.py permet de generer un pdf qui se basera sur le fichier resultats.txt pour rendre un fichier pdf plus lisible. 
 Ignorer les modules "impression" & "upload" qui pour l'instant n'ont pas été testé.
 
 # Pour la version Tester.py
-Les tests nécessitant des entrées de l'utilisateur se feront depuis le terminal.
+Les tests nécessitant des entrées de l'utilisateur se feront depuis le terminal, donc gardez un oeil sur ce dernier afin de voir si le programme nécessite une entrée.
 
 # Les résultats :
-Vous retrouverez les resultats des tests dans les repertoire de travail. Le resultat du test du microphone s'appelle très intuitivement "test_microphone.wav" et sera dans le repertoire  du repo tout comme le rapport des tests en pdf => "rapport_de_test.pdf"... Dans le dossier "output" vous trouverez le resultats au format txt.
-
-
-
-
-
-
+En début d'execution, le programme demande un input. Cet input sera la variable $OUTPUT_DIR et il sera automatiquement rangé sur le bureau dans un repertoire "RESULTATS_TESTS" grace à la variable $MAIN_DIR qui se crée directement à l'execution de Tester.py\
+(~/Desktop/$MAIN_DIR/$OUTPUT_DIR/FICHIERS_DE_RESULTATS)
