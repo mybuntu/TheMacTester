@@ -17,18 +17,18 @@ def user_test(output_file):
         "Port HDMI ?",
         "Slot RAM ?",
         "Ventilateurs ?",
-        "Wifi/Airport ?",
-        "Bluetooth ?",
-        "Clavier ?",
         "Bouton Power ?",
         "Empreinte Touch ID ?",
-        "Indicateur de charge ?",
+        "Touchbar ?",
+        "Clavier ?",
         "Trackpad ?",
         "Charnière ?",
+        "Indicateur de charge ?",
         "Témoin de mise en veille ?",
-        "Touchbar ?",
-        "Rétroéclairage Clavier ?",
         "Capteur de luminosité ?"
+        "Rétroéclairage Clavier ?",
+        "Wifi/Airport ?",
+        "Bluetooth ?",
     ]
 
     os.system('cls' if os.name == 'nt' else 'clear')
