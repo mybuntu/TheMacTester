@@ -49,3 +49,7 @@ Les tests nécessitant des entrées de l'utilisateur se feront depuis le termina
 # Les résultats :
 En début d'execution, le programme demande un input. Cet input sera la variable $OUTPUT_DIR et il sera automatiquement rangé sur le bureau dans un repertoire "RESULTATS_TESTS" grace à la variable $MAIN_DIR qui se crée directement à l'execution de Tester.py\
 (~/Desktop/$MAIN_DIR/$OUTPUT_DIR/FICHIERS_DE_RESULTATS)
+
+Pour les Reconditionnement :
+-
+Il suffit de taper "Recond" (avec le 'R' Majuscule) et tous les fichiers de sorties seront envoyé dans le dossiers déstinnée aux machines reconditionnées. 
