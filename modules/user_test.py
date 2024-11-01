@@ -25,10 +25,10 @@ def user_test(output_file):
         "Charnière ?",
         "Indicateur de charge ?",
         "Témoin de mise en veille ?",
-        "Capteur de luminosité ?"
+        "Capteur de luminosité ?",
         "Rétroéclairage Clavier ?",
         "Wifi/Airport ?",
-        "Bluetooth ?",
+        "Bluetooth ?"
     ]
 
     os.system('cls' if os.name == 'nt' else 'clear')
