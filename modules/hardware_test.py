@@ -1,4 +1,3 @@
-#     return test_results
 # The GUIless Mac Tester
 ## by Jules David
 import os
