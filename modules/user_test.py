@@ -10,7 +10,11 @@ def user_test(output_file):
 
     questions = [
         "Connecteur de charge ?",
-        "Ports (USB, Thunderbolt, SD-Card slot, HDMI port) ?",
+        "Port USB ?",
+        "Thunderbolt Écran ?",
+        "Thunderbolt Data ?",
+        "SD-Card Slot, ?",
+        "Port HDMI ?",
         "Slot RAM ?",
         "Ventilateurs ?",
         "Wifi/Airport ?",
