@@ -19,7 +19,7 @@ OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')  # Chemin de resultats.t
 
 # Fonction pour exécuter chaque test avec les chemins mis à jour
 def run_info_test():
-    global serial_number  # Utilisez une variable globale pour stocker le numéro de série
+    global serial_number
     serial_number = info.collect_info(OUTPUT_FILE)
     messagebox.showinfo("Info", "Informations système collectées.")
 
@@ -35,9 +35,6 @@ def run_hardware_test():
     results = hardware_test.run_tests(OUTPUT_FILE, OUTPUT_DIR)
     messagebox.showinfo("Tests matériels", f"Résultats matériels : {results}")
 
-# def run_user_test():
-#     user_test(OUTPUT_FILE)
-#     messagebox.showinfo("Tests utilisateur", "Résultats des tests utilisateur enregistrés.")
 def run_user_test():
     user_test(OUTPUT_FILE)
     messagebox.showinfo("Test utilisateur", "Tests utilisateur complétés.")
@@ -64,7 +61,6 @@ root.geometry("400x400")
 tk.Button(root, text="Prendre les informations système", command=run_info_test).pack(pady=5)
 tk.Button(root, text="Collecter les spécifications système", command=run_specs_test).pack(pady=5)
 tk.Button(root, text="Consulter l'état de la batterie", command=run_battery_test).pack(pady=5)
-# tk.Button(root, text="Tester les composants matériels", command=run_hardware_test).pack(pady=5)
 tk.Button(root, text="Tester les composants matériels", command=lambda: run_hardware_test()).pack(pady=5)
 tk.Button(root, text="Consulter ou rapporter d'autres pannes", command=run_user_test).pack(pady=5)
 tk.Button(root, text="Générer le rapport PDF", command=lambda: generate_report(serial_number)).pack(pady=5)
