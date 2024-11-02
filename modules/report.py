@@ -31,10 +31,10 @@ def generate_pdf(output_file, pdf_path, terminal_output):
                 if "===" in line:
                     pdf.set_font("Arial", 'B', 12)
                     line = line.replace("===", "").strip()  # Supprime les "==="
-                    pdf.cell(0, 10, line, ln=True)
+                    pdf.cell(0, 6, line, ln=True)
                     pdf.set_font("Arial", '', 10)  # Repasse en normal pour le contenu suivant
                 else:
-                    pdf.multi_cell(0, 10, line)
+                    pdf.multi_cell(0, 4, line)
         # Enregistrer le PDF au chemin spécifié
         pdf.output(pdf_path)
         print("Le PDF a été généré avec succès !")
