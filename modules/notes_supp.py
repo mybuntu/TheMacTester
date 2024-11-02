@@ -12,7 +12,7 @@ def add_notes(output_file):
     if notes:
         # Enregistrer les notes dans le fichier `resultats.txt`
         with open(output_file, "a", encoding="utf-8") as file:
-            file.write("\nNotes supplémentaires :\n")
+            file.write("\n=== Notes supplémentaires : ===\n")
             file.write(f"{notes}\n")
         messagebox.showinfo("Notes", "Les notes supplémentaires ont été ajoutées.")
     else:
