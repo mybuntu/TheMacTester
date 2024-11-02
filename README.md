@@ -4,7 +4,7 @@
 Structure:
 ---------
 ```plaintext
-test_mac/
+TheMacTester/
 ├── requirements.txt        # Dependances (libraies pythons)
 |
 ├── Tester.py               # Script de tests Graphique
@@ -14,6 +14,7 @@ test_mac/
 │   ├── battery_test.py     # Module pour les tests concernant la batterie
 │   └── hardware_test.py    # Module pour les tests matériels
 │   └── user_test.py        # Module pour générer les tests utilisateurs
+│   └── notes_supp.py       # Module pour noter des éléments supplémentaires 
 │   └── report.py           # Module pour générer le rapport PDF
 ├── resources/              # Dossier pour les fichiers de ressources (si besoin)
 │   └── model_years.txt     # Fichier contenant les modèles et les années
