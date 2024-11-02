@@ -6,6 +6,8 @@ from tkinter import messagebox
 from modules import info, specs, battery_test, hardware_test, user_test, report, notes_supp
 from modules.user_test import user_test
 
+os.system('cls' if os.name == 'nt' else 'clear')
+
 # Configuration du répertoire de sortie
 def set_output_directory():
     user_input = input("Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise \n POUR UN RECONDITIONNEMENT\n Veuillez taper 'Recond': ")
@@ -41,6 +43,10 @@ def run_user_test():
     user_test(OUTPUT_FILE)
     messagebox.showinfo("Test utilisateur", "Tests utilisateur complétés.")
 
+def run_notes_supp():
+    notes_supp.add_notes(OUTPUT_FILE)
+    messagebox.showinfo("Notes", "Notes supplémentaires enregistrées.")
+
 def generate_report(serial_number):
     # Vérifiez si un numéro de série est fourni
     if not serial_number:
@@ -65,6 +71,7 @@ tk.Button(root, text="Collecter les spécifications système", command=run_specs
 tk.Button(root, text="Consulter l'état de la batterie", command=run_battery_test).pack(pady=5)
 tk.Button(root, text="Tester les composants matériels", command=lambda: run_hardware_test()).pack(pady=5)
 tk.Button(root, text="Consulter ou rapporter d'autres pannes", command=run_user_test).pack(pady=5)
+tk.Button(root, text="Ajouter des notes supplémentaires", command=run_notes_supp).pack(pady=5)
 tk.Button(root, text="Générer le rapport PDF", command=lambda: generate_report(serial_number)).pack(pady=5)
 tk.Button(root, text="Quitter", command=root.quit).pack(pady=5)
 
