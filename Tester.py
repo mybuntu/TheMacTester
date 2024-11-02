@@ -3,7 +3,7 @@
 import os
 import tkinter as tk
 from tkinter import messagebox
-from modules import info, specs, battery_test, hardware_test, user_test, report
+from modules import info, specs, battery_test, hardware_test, user_test, report, notes_supp
 from modules.user_test import user_test
 
 # Configuration du répertoire de sortie
