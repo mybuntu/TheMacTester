@@ -6,7 +6,7 @@ import sounddevice as sd
 import numpy as np
 import wavio
 import tkinter as tk
-# J'Aime ;echer des chattes
+
 RECORD_SECONDS = 2
 SAMPLE_RATE = 44100
 test_results = {}
