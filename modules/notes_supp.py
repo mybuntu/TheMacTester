@@ -1,6 +1,5 @@
 # The GUIless Mac Tester   
 ## by Jules David
-
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 
