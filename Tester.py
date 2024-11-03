@@ -11,15 +11,15 @@ os.system('cls' if os.name == 'nt' else 'clear')
 # Configuration du répertoire de sortie
 def set_output_directory():
     user_input = input("Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise \n POUR UN RECONDITIONNEMENT\n Veuillez taper 'Recond': ")
-    main_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'RESULTATS_TESTS')  # Dossier principal sur le bureau
-    output_dir = os.path.join(main_dir, user_input)  # Sous-dossier pour cet utilisateur
+    main_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'RESULTATS_TESTS')
+    output_dir = os.path.join(main_dir, user_input)
     os.makedirs(output_dir, exist_ok=True)
     print(f"Dossier de sortie créé : {output_dir}")
     return output_dir
 
 # Initialisation des variables de chemin de sortie
-OUTPUT_DIR = set_output_directory()  # Le dossier utilisateur
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')  # Chemin de resultats.txt
+OUTPUT_DIR = set_output_directory()
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
 
 # Fonction pour exécuter chaque test avec les chemins mis à jour
 def run_info_test():
