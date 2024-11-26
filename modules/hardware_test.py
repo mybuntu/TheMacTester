@@ -6,6 +6,7 @@ import sounddevice as sd
 import numpy as np
 import wavio
 import tkinter as tk
+from tkinter import simpledialog
 
 RECORD_SECONDS = 2
 SAMPLE_RATE = 44100
