@@ -13,14 +13,24 @@ test_results = {}
 
 # Fonction de réponses au rapport de tests
 def ask_confirmation(component):
-    response = input(f"Est-ce que {component} fonctionne ? O/n : ").strip()
-    if response == '' or response.lower() == 'o':
+    # Créer une fenêtre racine temporaire pour le dialogue
+    root = tk.Tk()
+    root.withdraw()  # Masquer la fenêtre principale
+    response = simpledialog.askstring(
+        title="Confirmation",
+        prompt=f"Est-ce que {component} fonctionne ? O/n : "
+    )
+    root.destroy()  # Détruire la fenêtre racine après utilisation
+    
+    # Interpréter la réponse
+    if response is None or response.strip().lower() in ('', 'o', 'oui'):
         return "Fonctionnel"
-    elif response.lower() == 'n':
+    elif response.strip().lower() in ('n', 'non'):
         return "Défectueux"
     else:
         print("Réponse invalide, par défaut 'Oui' enregistré.")
         return "Fonctionnel"
+
 
 # Test des composants
 def test_camera():
