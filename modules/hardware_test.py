@@ -28,7 +28,8 @@ def ask_confirmation(component):
         return "Fonctionnel"
     elif response.strip().lower() in ('n', 'non'):
         return "Défectueux"
-    elif response.strip().lower() in ('a changer', 'a', 'r')
+    elif response.strip().lower() in ('a changer', 'a', 'r'):
+        return "A REMPLACER"
     else:
         print("Réponse invalide, par défaut 'Oui' enregistré.")
         return "Fonctionnel"
