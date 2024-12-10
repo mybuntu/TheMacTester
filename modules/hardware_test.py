@@ -19,7 +19,7 @@ def ask_confirmation(component):
     root.withdraw()  # Masquer la fenêtre principale
     response = simpledialog.askstring(
         title="Confirmation",
-        prompt=f"Est-ce que {component} fonctionne ? O/n (taper "A" ou "R" Pour "A REMPLACER: "
+        prompt=f"Est-ce que {component} fonctionne ? O/n : "
     )
     root.destroy()  # Détruire la fenêtre racine après utilisation
     
@@ -28,8 +28,6 @@ def ask_confirmation(component):
         return "Fonctionnel"
     elif response.strip().lower() in ('n', 'non'):
         return "Défectueux"
-    elif response.strip().lower() in ('a changer', 'a', 'r'):
-        return "A REMPLACER"
     else:
         print("Réponse invalide, par défaut 'Oui' enregistré.")
         return "Fonctionnel"
