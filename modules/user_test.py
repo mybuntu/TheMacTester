@@ -34,7 +34,7 @@ def user_test(output_file):
     os.system('cls' if os.name == 'nt' else 'clear')
 
     for question in questions:
-        answer = simpledialog.askstring("Test Utilisateur", f"{question}\n([F]onctionnel)/[D]éfectueux/[N]e possède pas): (Enter => [F]onctionnel)")
+        answer = simpledialog.askstring("Test Utilisateur", f"{question}\n([F]onctionnel)/[D]éfectueux/[N]e possède pas): (Enter => [F]onctionnel) \n [A] Remplacer")
         if answer and answer.lower() == "d":
             issues_detected[question] = "Défectueux"
         elif answer and answer.lower() == "n":
