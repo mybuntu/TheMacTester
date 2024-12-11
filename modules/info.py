@@ -1,23 +1,24 @@
-# The GUIless Mac Tester   
-## Jules David 
 import subprocess
 import re
 import os
 
 def load_model_years(file_path):
-    """Charge la correspondance entre les identifiants de modèle et les années."""
+    # Charge la correspondance entre les identifiants de modèle et les années.
     model_year_map = {}
     try:
         with open(file_path, 'r') as file:
             for line in file:
-                model_id, year = line.strip().split()
-                model_year_map[model_id] = year
-    except Exception as e:
-        print(f"Erreur lors du chargement des modèles : {e}")
+                # Utiliser ";" comme séparateur
+                model_id, year, model_market_name = line.strip().split(';')
+                model_year_map[model_id] = (year, model_market_name)
+    except FileNotFoundError:
+        print(f"Erreur : le fichier {file_path} est introuvable.")
+    except ValueError:
+        print(f"Erreur de format dans le fichier {file_path}. Chaque ligne doit contenir trois colonnes séparées par ';'.")
     return model_year_map
 
 def collect_info(output_file):
-    """Récupère les informations système et les écrit dans un fichier texte."""
+    # Récupère les informations système et les écrit dans un fichier texte.
     try:
         # Obtenir les informations système avec system_profiler
         system_info = subprocess.check_output("system_profiler SPHardwareDataType", shell=True).decode('utf-8')
@@ -31,15 +32,19 @@ def collect_info(output_file):
             serial_number_value = serial_number.group(1).strip()
 
             # Charger la correspondance modèle <-> année
-            model_year_map = load_model_years(os.path.join(os.path.dirname(__file__), '..', 'resources', 'model_years.txt'))
-            year = model_year_map.get(model_id, "Année inconnue")
+            file_path = os.path.join(os.path.dirname(__file__), '..', 'resources', 'model_years.txt')
+            model_year_map = load_model_years(file_path)
+
+            year, model_market_name = model_year_map.get(model_id, ("Année inconnue", "Nom de modèle inconnu"))
 
             # Préparer les informations à écrire dans le fichier texte
             result_text = (
+                f"===Modèle: {model_market_name}===\n"
                 f"Identifiant du modèle: {model_id}\n"
                 f"Année: {year}\n"
                 f"Numéro de série: {serial_number_value}\n"
             )
+
             # Écriture dans le fichier texte
             with open(output_file, 'w', encoding='utf-8') as file:
                 file.write("=== INFO SYSTÈME ===\n")
