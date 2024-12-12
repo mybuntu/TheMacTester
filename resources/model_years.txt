@@ -1,74 +1,78 @@
-MacBook5,2;2009;MacBook 13 pouces  
-MacBook6,1;2009;MacBook 13 pouces  
-MacBook7,1;2010;MacBook 13 pouces  
-MacBook8,1;2015;MacBook 12 pouces  
-MacBook9,1;2016;MacBook 12 pouces  
-MacBook10,1;2017;MacBook 12 pouces  
-MacBookPro5,3;2009;MacBook Pro 15 pouces  
-MacBookPro5,5;2009;MacBook Pro 13 pouces  
-MacBookPro6,1;2010;MacBook Pro 15 pouces  
-MacBookPro6,2;2010;MacBook Pro 15 pouces  
-MacBookPro7,1;2010;MacBook Pro 13 pouces  
-MacBookPro8,1;2011;MacBook Pro 13 pouces  
-MacBookPro8,2;2011;MacBook Pro 15 pouces  
-MacBookPro8,3;2011;MacBook Pro 17 pouces  
-MacBookPro9,1;2012;MacBook Pro 15 pouces  
-MacBookPro9,2;2012;MacBook Pro 13 pouces  
-MacBookPro10,1;2012;MacBook Pro 15 pouces Retina  
-MacBookPro11,1;2013;MacBook Pro 13 pouces Retina  
-MacBookPro11,2;2013-2014;MacBook Pro 15 pouces Retina  
-MacBookPro11,3;2014;MacBook Pro 15 pouces Retina  
-MacBookPro11,4;2015;MacBook Pro 15 pouces Retina  
-MacBookPro11,5;2015;MacBook Pro 15 pouces Retina  
-MacBookPro12,1;2015;MacBook Pro 13 pouces Retina  
-MacBookPro13,1;2016;MacBook Pro 13 pouces  
-MacBookPro13,2;2016;MacBook Pro 13 pouces avec Touch Bar  
-MacBookPro13,3;2016;MacBook Pro 15 pouces avec Touch Bar  
-MacBookPro14,1;2017;MacBook Pro 13 pouces  
-MacBookPro14,2;2017;MacBook Pro 13 pouces avec Touch Bar  
-MacBookPro14,3;2017;MacBook Pro 15 pouces avec Touch Bar  
-MacBookPro15,1;2018;MacBook Pro 15 pouces avec Touch Bar  
-MacBookPro15,2;2018;MacBook Pro 13 pouces avec Touch Bar  
-MacBookPro16,1;2019;MacBook Pro 16 pouces  
-MacBookPro16,4;2019;MacBook Pro 16 pouces  
-MacBookPro17,1;2020;MacBook Pro 13 pouces avec M1  
-MacBookPro18,3;2021;MacBook Pro 14 pouces avec M1 Pro/Max  
-MacBookPro18,4;2021;MacBook Pro 16 pouces avec M1 Pro/Max  
-MacBookPro19,3;2023;MacBook Pro 14 pouces avec M2 Pro/Max  
-MacBookPro19,4;2023;MacBook Pro 16 pouces avec M2 Pro/Max  
-MacBookPro20,1;2024;MacBook Pro 13 pouces  
-MacBookAir2,1;2009;MacBook Air 13 pouces  
-MacBookAir3,1;2010;MacBook Air 11 pouces  
-MacBookAir3,2;2010;MacBook Air 13 pouces  
-MacBookAir4,1;2011;MacBook Air 11 pouces  
-MacBookAir4,2;2011;MacBook Air 13 pouces  
-MacBookAir5,1;2012;MacBook Air 11 pouces  
-MacBookAir5,2;2012;MacBook Air 13 pouces  
-MacBookAir6,1;2013-2014;MacBook Air 11 pouces  
-MacBookAir6,2;2013-2014;MacBook Air 13 pouces  
-MacBookAir7,1;2015;MacBook Air 11 pouces  
-MacBookAir7,2;2015-2017;MacBook Air 13 pouces  
-MacBookAir8,1;2018-2019;MacBook Air 13 pouces Retina  
-MacBookAir9,1;2020;MacBook Air 13 pouces Retina avec M1  
-MacBookAir10,1;2020;MacBook Air 13 pouces Retina avec M1  
-MacBookAir11,1;2022;MacBook Air 13 pouces Retina avec M2  
-MacBookAir12,1;2024;MacBook Air 15 pouces Retina avec M2  
-iMac10,1;2009;iMac 21,5 pouces  
-iMac11,1;2009;iMac 27 pouces  
-iMac12,1;2011;iMac 21,5 pouces  
-iMac12,2;2011;iMac 27 pouces  
-iMac13,1;2012;iMac 21,5 pouces  
-iMac13,2;2012;iMac 27 pouces  
-iMac14,1;2013;iMac 21,5 pouces  
-iMac14,2;2013;iMac 27 pouces  
-iMac14,4;2014;iMac 21,5 pouces  
-iMac15,1;2014;iMac 27 pouces Retina 5K  
-iMac16,1;2015;iMac 21,5 pouces  
-iMac16,2;2015;iMac 21,5 pouces Retina 4K  
-iMac17,1;2015;iMac 27 pouces Retina  
-iMac18,1;2017;iMac 21,5 pouces Retina  
-iMac18,2;2017;iMac 21,5 pouces Retina  
-iMac18,3;2017;iMac 27 pouces Retina  
-iMac19,1;2019;iMac 27 pouces Retina  
-iMac20,1;2020;iMac 27 pouces Retina  
-iMac21,1;2021;iMac 24 pouces avec M1  
+MacBook1,1;2006;MacBook 13-inch
+MacBook2,1;2007;MacBook 13-inch
+MacBook3,1;2007;MacBook 13-inch
+MacBook4,1;2008;MacBook 13-inch
+MacBook5,1;2008;MacBook 13-inch Aluminum
+MacBook5,2;2009;MacBook 13-inch
+MacBook6,1;2009;MacBook 13-inch
+MacBook7,1;2010;MacBook 13-inch
+MacBook8,1;2015;MacBook 12-inch Retina
+MacBook9,1;2016;MacBook 12-inch Retina
+MacBook10,1;2017;MacBook 12-inch Retina
+MacBookAir1,1;2008;MacBook Air 13-inch
+MacBookAir2,1;2009;MacBook Air 13-inch
+MacBookAir3,1;2010;MacBook Air 11-inch
+MacBookAir3,2;2010;MacBook Air 13-inch
+MacBookAir4,1;2011;MacBook Air 11-inch
+MacBookAir4,2;2011;MacBook Air 13-inch
+MacBookAir5,1;2012;MacBook Air 11-inch
+MacBookAir5,2;2012;MacBook Air 13-inch
+MacBookAir6,1;2013;MacBook Air 11-inch
+MacBookAir6,2;2013;MacBook Air 13-inch
+MacBookAir7,1;2015;MacBook Air 11-inch
+MacBookAir7,2;2015;MacBook Air 13-inch
+MacBookAir8,1;2018;MacBook Air 13-inch Retina
+MacBookAir8,2;2019;MacBook Air 13-inch Retina
+MacBookAir9,1;2020;MacBook Air 13-inch Retina
+MacBookAir10,1;2020;MacBook Air 13-inch M1
+MacBookAir11,1;2023;MacBook Air 15-inch M2
+MacBookAir11,2;2023;MacBook Air 13-inch M2
+MacBookPro1,1;2006;MacBook Pro 15-inch
+MacBookPro1,2;2006;MacBook Pro 17-inch
+MacBookPro2,1;2007;MacBook Pro 15-inch
+MacBookPro2,2;2007;MacBook Pro 17-inch
+MacBookPro3,1;2007;MacBook Pro 15-inch
+MacBookPro3,2;2007;MacBook Pro 17-inch
+MacBookPro4,1;2008;MacBook Pro 15-inch
+MacBookPro5,1;2008;MacBook Pro 15-inch Unibody
+MacBookPro5,2;2009;MacBook Pro 17-inch Unibody
+MacBookPro5,3;2009;MacBook Pro 15-inch
+MacBookPro5,4;2009;MacBook Pro 15-inch
+MacBookPro5,5;2009;MacBook Pro 13-inch
+MacBookPro6,1;2010;MacBook Pro 17-inch
+MacBookPro6,2;2010;MacBook Pro 15-inch
+MacBookPro7,1;2010;MacBook Pro 13-inch
+MacBookPro8,1;2011;MacBook Pro 13-inch
+MacBookPro8,2;2011;MacBook Pro 15-inch
+MacBookPro8,3;2011;MacBook Pro 17-inch
+MacBookPro9,1;2012;MacBook Pro 15-inch Retina
+MacBookPro9,2;2012;MacBook Pro 13-inch
+MacBookPro10,1;2012;MacBook Pro 15-inch Retina
+MacBookPro10,2;2012;MacBook Pro 13-inch Retina
+MacBookPro11,1;2013;MacBook Pro 13-inch Retina
+MacBookPro11,2;2013;MacBook Pro 15-inch Retina
+MacBookPro11,3;2013;MacBook Pro 15-inch Retina
+MacBookPro11,4;2015;MacBook Pro 15-inch Retina
+MacBookPro11,5;2015;MacBook Pro 15-inch Retina
+MacBookPro12,1;2015;MacBook Pro 13-inch Retina
+MacBookPro13,1;2016;MacBook Pro 13-inch Two Thunderbolt 3
+MacBookPro13,2;2016;MacBook Pro 13-inch Four Thunderbolt 3
+MacBookPro13,3;2016;MacBook Pro 15-inch Four Thunderbolt 3
+MacBookPro14,1;2017;MacBook Pro 13-inch Two Thunderbolt 3
+MacBookPro14,2;2017;MacBook Pro 13-inch Four Thunderbolt 3
+MacBookPro14,3;2017;MacBook Pro 15-inch Four Thunderbolt 3
+MacBookPro15,1;2018;MacBook Pro 15-inch Touch Bar
+MacBookPro15,2;2018;MacBook Pro 13-inch Four Thunderbolt 3
+MacBookPro15,3;2019;MacBook Pro 15-inch Touch Bar
+MacBookPro15,4;2019;MacBook Pro 13-inch Two Thunderbolt 3
+MacBookPro16,1;2019;MacBook Pro 16-inch
+MacBookPro16,2;2020;MacBook Pro 13-inch Four Thunderbolt 3
+MacBookPro16,3;2020;MacBook Pro 13-inch Two Thunderbolt 3
+MacBookPro16,4;2020;MacBook Pro 16-inch
+MacBookPro17,1;2020;MacBook Pro 13-inch M1
+MacBookPro18,1;2021;MacBook Pro 16-inch M1 Pro/Max
+MacBookPro18,2;2021;MacBook Pro 16-inch M1 Pro/Max
+MacBookPro18,3;2021;MacBook Pro 14-inch M1 Pro/Max
+MacBookPro18,4;2021;MacBook Pro 14-inch M1 Pro/Max
+MacBookPro19,1;2023;MacBook Pro 14-inch M2 Pro/Max
+MacBookPro19,2;2023;MacBook Pro 16-inch M2 Pro/Max
