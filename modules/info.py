@@ -35,7 +35,7 @@ def collect_info(output_file):
             file_path = os.path.join(os.path.dirname(__file__), '..', 'resources', 'model_years.txt')
             model_year_map = load_model_years(file_path)
 
-            year, model_market_name = model_year_map.get(model_id, ("Année inconnue", "Nom de modèle inconnu"))
+            year, model_market_name = model_year_map.get(model_id, (".................", "................."))
 
             # Préparer les informations à écrire dans le fichier texte
             result_text = (
