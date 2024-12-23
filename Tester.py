@@ -2,19 +2,25 @@
 ## Jules David
 import os
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, simpledialog
 from modules import info, specs, battery_test, hardware_test, user_test, report, notes_supp
 from modules.user_test import user_test
 
 os.system('cls' if os.name == 'nt' else 'clear')
-
 # Configuration du répertoire de sortie
 def set_output_directory():
-    user_input = input("Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise \n POUR UN RECONDITIONNEMENT\n Veuillez taper 'Recond': ")
+    user_input = simpledialog.askstring(
+        "Nom du propriétaire",
+        "Merci d’entrer le nom du propriétaire de la machine ou de l’entreprise.\nPOUR UN RECONDITIONNEMENT\nVeuillez taper 'Recond':"
+    )
+    if not user_input:
+        messagebox.showwarning("Erreur", "Vous devez entrer un nom !")
+        return set_output_directory()
+    
     main_dir = os.path.join(os.path.expanduser('~'), 'Desktop', 'RESULTATS_TESTS')
     output_dir = os.path.join(main_dir, user_input)
     os.makedirs(output_dir, exist_ok=True)
-    print(f"Dossier de sortie créé : {output_dir}")
+    messagebox.showinfo("Succès", f"Dossier de sortie créé : {output_dir}")
     return output_dir
 
 # Initialisation des variables de chemin de sortie
