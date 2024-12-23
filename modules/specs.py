@@ -43,27 +43,82 @@ def get_gpu_info():
     except subprocess.CalledProcessError:
         return "Impossible de récupérer les informations du GPU.\n"
 
+
+
+
+def parse_disk_capacity_from_name(disk_name):
+    """Analyse la capacité à partir du nom du disque, si possible."""
+    match = re.search(r"(\d+)(G|T)", disk_name, re.IGNORECASE)  # Recherche des chiffres suivis de "G" ou "T"
+    if match:
+        capacity = int(match.group(1))  # Convertit les chiffres extraits en entier
+        unit = match.group(2).upper()  # G ou T
+        return f"{capacity} {unit}o"  # Format lisible : "512 Go" ou "1 To"
+    return "Capacité inconnue"
+
 def get_disk_info():
     """Récupère les informations des disques (type, capacité, état de santé)."""
     try:
         disk_info = subprocess.check_output("system_profiler SPStorageDataType", shell=True).decode('utf-8')
-        disk_entries = re.findall(r"Device Name:\s*(.+?)\n.*?Medium Type:\s*(.+?)\n.*?Capacity:\s*(.+?)\n.*?S\.M\.A\.R\.T\. Status:\s*(.+?)\n", disk_info, re.DOTALL)
         
+        # Ajustement de la regex pour extraire les données
+        disk_entries = re.findall(
+            r"Device Name:\s*(.+?)\s*\n.*?Medium Type:\s*(.+?)\s*\n.*?Capacity:\s*(.+?)\s*\n.*?S\.M\.A\.R\.T\. Status:\s*(\w+)",
+            disk_info,
+            re.DOTALL
+        )
+
         results = []
         if disk_entries:
             for entry in disk_entries:
-                results.extend([
-                    f"Disque: {entry[0].strip()}",
-                    f"Type: {entry[1].strip()}",
-                    f"Capacité: {entry[2].strip()}",
-                    f"Santé: {entry[3].strip()}\n"
-                ])
+                disk_name = entry[0].strip()
+                medium_type = entry[1].strip()
+                raw_capacity = entry[2].strip()
+                smart_status = entry[3].strip()
+
+                # Analyse de la capacité depuis le nom du disque
+                formatted_capacity = parse_disk_capacity_from_name(disk_name)
+
+                results.append(f"Disque: {disk_name}")
+                results.append(f"Type: {medium_type}")
+                results.append(f"Capacité: {formatted_capacity}")
+                results.append(f"Santé: {smart_status}\n")
         else:
             results.append("Aucun disque trouvé.\n")
         
         return "\n".join(results)
     except subprocess.CalledProcessError:
         return "Impossible de récupérer les informations du disque.\n"
+
+
+
+
+
+
+
+
+
+
+# def get_disk_info():
+#     """Récupère les informations des disques (type, capacité, état de santé)."""
+#     try:
+#         disk_info = subprocess.check_output("system_profiler SPStorageDataType", shell=True).decode('utf-8')
+#         disk_entries = re.findall(r"Device Name:\s*(.+?)\n.*?Medium Type:\s*(.+?)\n.*?Capacity:\s*(.+?)\n.*?S\.M\.A\.R\.T\. Status:\s*(.+?)\n", disk_info, re.DOTALL)
+        
+#         results = []
+#         if disk_entries:
+#             for entry in disk_entries:
+#                 results.extend([
+#                     f"Disque: {entry[0].strip()}",
+#                     f"Type: {entry[1].strip()}",
+#                     f"Capacité: {entry[2].strip()}",
+#                     f"Santé: {entry[3].strip()}\n"
+#                 ])
+#         else:
+#             results.append("Aucun disque trouvé.\n")
+        
+#         return "\n".join(results)
+#     except subprocess.CalledProcessError:
+#         return "Impossible de récupérer les informations du disque.\n"
 
 def export_system_specs(output_file):
     # Rassemble toutes les spécifications système et les écrit dans le fichier resultats.txt.
