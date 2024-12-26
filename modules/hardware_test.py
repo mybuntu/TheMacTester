@@ -36,12 +36,14 @@ def ask_confirmation(component):
 
 
 # Test des composants
+# Test devla camera
 def test_camera():
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Erreur : Impossible d'ouvrir la caméra.")
         test_results["Caméra"] = "Défectueux"
         return
+    print("Caméra détectée, vérification réussie.")
     print("Appuyez sur 'q' pour quitter la vidéo.")
     while True:
         ret, frame = cap.read()
@@ -54,7 +56,6 @@ def test_camera():
     cap.release()
     cv2.destroyWindow('Test de la caméra')
     test_results["Caméra"] = ask_confirmation("la caméra")
-
 # Test du microphone
 def test_microphone(output_dir):
     print("Enregistrement audio...")

@@ -1,12 +1,40 @@
-# The GUI Mac Tester   
-## Jules David
 import os
+import sys
 import tkinter as tk
 from tkinter import messagebox, simpledialog
-from modules import info, specs, battery_test, hardware_test, user_test, report, notes_supp
-from modules.user_test import user_test
+import cv2
+from modules import info, other_tests, specs, battery_test, hardware_test, report, notes_supp
+#################################################################################################
+print(f"Répertoire actuel : {os.getcwd()}")
+# Définir le répertoire de travail
+if getattr(sys, 'frozen', False):  # Détecter si l'application est empaquetée
+    base_path = sys._MEIPASS
+else:  # Sinon, en mode développement
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    print(f"Chemin de base : {base_path}")
 
-os.system('cls' if os.name == 'nt' else 'clear')
+
+os.chdir(base_path)
+
+
+cap = cv2.VideoCapture(0)  # On tente d'ouvrir la caméra
+if cap.isOpened():
+    print("Caméra correctement détectée.")
+    cap.release()
+else:
+    print("Erreur : Impossible d'ouvrir la caméra.")
+
+# Définir resource_path pour PyInstaller
+def resource_path(relative_path):
+    """Obtenir le chemin d'une ressource, compatible avec PyInstaller."""
+    try:
+        # PyInstaller stocke les ressources dans un répertoire temporaire _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        # En mode développement, on utilise le chemin normal
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+#################################################################################################
 # Configuration du répertoire de sortie
 def set_output_directory():
     user_input = simpledialog.askstring(
@@ -23,7 +51,7 @@ def set_output_directory():
     messagebox.showinfo("Succès", f"Dossier de sortie créé : {output_dir}")
     return output_dir
 
-# Initialisation des variables de chemin de sortie
+# Initialisation des variables globales
 OUTPUT_DIR = set_output_directory()
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'resultats.txt')
 
@@ -46,7 +74,7 @@ def run_hardware_test():
     messagebox.showinfo("Tests matériels", f"Résultats matériels : {results}")
 
 def run_user_test():
-    user_test(OUTPUT_FILE)
+    other_tests.user_test(OUTPUT_FILE)
     messagebox.showinfo("Test utilisateur", "Tests utilisateur complétés.")
 
 def run_notes_supp():
@@ -61,7 +89,7 @@ def generate_report(serial_number):
     report.generate_pdf(OUTPUT_FILE, os.path.join(OUTPUT_DIR, pdf_filename), {})
     messagebox.showinfo("Rapport", "Rapport PDF généré.")
 
-# FONCTION QUITTER
+# Fonction pour quitter proprement
 def on_quit():
     print("Fermeture de l'application...")
     root.quit()

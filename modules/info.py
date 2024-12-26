@@ -1,6 +1,15 @@
 import subprocess
 import re
 import os
+import sys
+
+def get_resource_path(relative_path):
+    """Retourne le chemin absolu vers une ressource, que l'application soit exécutée normalement ou dans un bundle PyInstaller."""
+    if hasattr(sys, '_MEIPASS'):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 def load_model_years(file_path):
     # Charge la correspondance entre les identifiants de modèle et les années.
@@ -16,7 +25,6 @@ def load_model_years(file_path):
     except ValueError:
         print(f"Erreur de format dans le fichier {file_path}. Chaque ligne doit contenir trois colonnes séparées par ';'.")
     return model_year_map
-
 def collect_info(output_file):
     # Récupère les informations système et les écrit dans un fichier texte.
     try:
@@ -32,7 +40,7 @@ def collect_info(output_file):
             serial_number_value = serial_number.group(1).strip()
 
             # Charger la correspondance modèle <-> année
-            file_path = os.path.join(os.path.dirname(__file__), '..', 'resources', 'model_years.txt')
+            file_path = get_resource_path('resources/model_years.txt')
             model_year_map = load_model_years(file_path)
 
             year, model_market_name = model_year_map.get(model_id, (".................", "................."))
@@ -45,13 +53,16 @@ def collect_info(output_file):
                 f"Numéro de série: {serial_number_value}\n"
             )
 
+            # Construire le chemin complet pour le fichier de sortie
+            output_path = get_resource_path(output_file)
+
             # Écriture dans le fichier texte
-            with open(output_file, 'w', encoding='utf-8') as file:
+            with open(output_path, 'w', encoding='utf-8') as file:
                 file.write("=== INFO SYSTÈME ===\n")
                 file.write(result_text)
                 file.write("\n")
 
-            print(f"Les informations de la machine ont été exportées dans {output_file} avec succès.")
+            print(f"Les informations de la machine ont été exportées dans {output_path} avec succès.")
             return serial_number_value  # Retourne le numéro de série
         else:
             print("Identifiant du modèle ou numéro de série non trouvé.")
